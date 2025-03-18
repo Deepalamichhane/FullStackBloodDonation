@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Reminder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E53935', // Red from your palette
+                        secondary: '#1E88E5', // Blue from your palette
+                        accent: '#F5F5F5', // Light Grey from your palette
+                        dark: '#212121', // Black from your palette
+                        bgdark: '#1e1e1e', // dark background
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-accent font-sans text-dark">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow-md">
+        <div class="bg-bgdark text-white p-8 text-center">
+            <img
+                src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720958373/logo1_ewwjxg.png"
+                alt="BloodBridge Logo"
+                class="mx-auto h-24"
+            />
+        </div>
+        <div class="p-4">
+            <h1 class="text-2xl font-bold text-center mb-4">Blood Donation Reminder</h1>
+            <p class="mb-4">Hello <%= name %>,</p>
+            <p class="mb-4">We hope this message finds you well.</p>
+            <p class="mb-4">We wanted to remind you that it has been 52 days since your last blood donation. Your generosity has already made a significant impact, and we would be grateful if you could consider donating blood again.</p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-2">Here are your last donation details:</p>
+            <p class="mb-4"><strong>Date of Last Donation:</strong> <%= date %></p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-4">Your continued support helps save lives and ensures a steady supply of blood for those in need.</p>
+            <h3 class="text-lg font-semibold mb-2">Next Steps:</h3>
+            <p class="mb-4">If you are willing to donate again, please visit our website or contact us to schedule your next donation.</p>
+            <img
+                src="Logo.jpg"
+                alt="Blood Donation"
+                class="mx-auto mb-4 rounded-md"
+            />
+            <h3 class="text-lg font-semibold mb-2">Note:</h3>
+            <p class="mb-4">If you have any questions or need assistance, please don't hesitate to contact us at <a href="mailto:support@bloodbridge.com" class="text-secondary hover:underline">support@bloodbridge.com</a>.</p>
+        </div>
+        <div class="bg-bgdark text-primary p-4 text-center">
+            <p class="mb-2">Thank you for your continued generosity and support.</p>
+            <p>Sincerely, <br />The BloodBridge Team</p>
+        </div>
+    </div>
+</body>
+</html>

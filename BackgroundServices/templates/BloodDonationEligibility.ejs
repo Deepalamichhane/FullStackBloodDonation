@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Eligibility Notification</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E53935', // Red from your palette
+                        secondary: '#1E88E5', // Blue from your palette
+                        accent: '#F5F5F5', // Light Grey from your palette
+                        dark: '#212121', // Black from your palette
+                        bgdark: '#1e1e1e', // dark background
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-accent font-sans text-dark">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow-md">
+        <div class="bg-bgdark text-white p-8 text-center">
+            <img
+                src="logo.png"
+                alt="BloodBridge Logo"
+                class="mx-auto h-24"
+            />
+        </div>
+        <div class="p-4">
+            <h1 class="text-2xl font-bold text-center mb-4">Blood Donation Eligibility Notification</h1>
+            <p class="mb-4">Hello <%= name %>,</p>
+            <p class="mb-4">Thank you for your interest in donating blood through BloodBridge.</p>
+            <p class="mb-4">We regret to inform you that based on the information provided, you do not meet the eligibility criteria for blood donation at this time.</p>
+            <p class="mb-4">The specific reasons for ineligibility are as follows:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>Minimum Age Requirement: You must be at least 18 years old to donate blood.</li>
+                <li>Minimum Weight Requirement: You must weigh at least 52kg to donate blood.</li>
+            </ul>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-2">According to the details you provided:</p>
+            <p class="mb-2"><strong>Age:</strong> <%= age %> years</p>
+            <p class="mb-4"><strong>Weight:</strong> <%= weight %> kg</p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-4">We encourage you to meet these requirements and reapply in the future. Your willingness to donate is greatly appreciated, and we hope to welcome you as a donor once you meet the eligibility criteria.</p>
+            <h3 class="text-lg font-semibold mb-2">Note:</h3>
+            <p class="mb-4">If you believe there has been an error or if you have any questions, please contact us at <a href="mailto:support@bloodbridge.com" class="text-secondary hover:underline">support@bloodbridge.com</a>.</p>
+        </div>
+        <div class="bg-bgdark text-primary p-4 text-center">
+            <p class="mb-2">Thank you for your understanding and support.</p>
+            <p>Sincerely, <br />The BloodBridge Team</p>
+        </div>
+    </div>
+</body>
+</html>
