@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blood Donation Confirmation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E53935', // Red from your palette
+                        secondary: '#1E88E5', // Blue from your palette
+                        accent: '#F5F5F5', // Light Grey from your palette
+                        dark: '#212121', // Black from your palette
+                        bgdark: '#1e1e1e', // dark background
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-accent font-sans text-dark">
+    <div class="max-w-xl mx-auto bg-white p-6 rounded shadow-md">
+        <div class="bg-bgdark text-white p-8 text-center">
+            <img
+                src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720958373/logo1_ewwjxg.png"
+                alt="BloodBridge Logo"
+                class="mx-auto h-24"
+            />
+        </div>
+        <div class="p-4">
+            <p class="mb-4">Hello <%= name %>,</p>
+            <p class="mb-4">Thank you for your generous blood donation.</p>
+            <p class="mb-4">Here are your details:</p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-2"><strong>Name:</strong> <%= name %></p>
+            <p class="mb-2"><strong>Email:</strong> <%= email %></p>
+            <p class="mb-2"><strong>Tel:</strong> <%= tel %></p>
+            <p class="mb-2"><strong>Address:</strong> <%= address %></p>
+            <p class="mb-2"><strong>Blood Group:</strong> <%= bloodgroup %></p>
+            <p class="mb-2"><strong>Any Disease in Blood:</strong> <%= diseases %></p>
+            <p class="mb-2"><strong>Weight:</strong> <%= weight %> kg</p>
+            <p class="mb-2"><strong>Blood Pressure:</strong> <%= bloodpressure %></p>
+            <p class="mb-2"><strong>Age:</strong> <%= age %> years</p>
+            <p class="mb-4"><strong>Date:</strong> <%= date %></p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-4">Here are the details of places you can donate blood:</p>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-2"><strong>Location:</strong> Red Cross Blood Donation Center</p>
+            <p class="mb-2"><strong>Date:</strong> July 20, 2024</p>
+            <p class="mb-2"><strong>Time:</strong> 10:00 AM</p>
+            <p class="mb-2"><strong>Address:</strong> 123 Main Street, Cityville</p>
+            <p class="mb-2">Contact Numbers:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>(123) 456-7890</li>
+                <li>(234) 567-8901</li>
+                <li>(345) 678-9012</li>
+                <li>(456) 789-0123</li>
+                <li>(567) 890-1234</li>
+            </ul>
+            <div class="border-t border-gray-300 my-4"></div>
+            <p class="mb-2"><strong>Location:</strong> Community Health Center</p>
+            <p class="mb-2"><strong>Date:</strong> July 22, 2024</p>
+            <p class="mb-2"><strong>Time:</strong> 2:00 PM</p>
+            <p class="mb-2"><strong>Address:</strong> 456 Elm Street, Townsville</p>
+            <p class="mb-2">Contact Numbers:</p>
+            <ul class="list-disc list-inside mb-4">
+                <li>(678) 901-2345</li>
+                <li>(789) 012-3456</li>
+                <li>(890) 123-4567</li>
+                <li>(901) 234-5678</li>
+                <li>(012) 345-6789</li>
+            </ul>
+            <img
+                src="https://res.cloudinary.com/dap91fhxh/image/upload/v1720957791/hero1_trpojy.jpg"
+                alt="Blood Donation"
+                class="mx-auto mb-4 rounded-md"
+            />
+            <h3 class="text-lg font-semibold mb-2">Note:</h3>
+            <p class="mb-4">If you did not apply for blood donation, please contact us immediately.</p>
+        </div>
+        <div class="bg-bgdark text-primary p-4 text-center">
+            <p class="mb-2">
+                If you have any questions, please don't hesitate to contact us at
+                <a href="mailto:support@bloodbridge.com" class="text-white hover:underline">support@bloodbridge.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
