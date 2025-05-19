@@ -1,7 +1,14 @@
 const express = require("express");
 const { verifyTokenAndAuthorization } = require("../middlewares/verifyToken");
 const router = express.Router();
-
+const {
+  createDonor,
+  getAlldonors,
+  updateDonor,
+  getOneDonor,
+  deleteDonor,
+  getDonorsStats,
+} = require("../controllers/donor.js");
 //ADD DONOR
 router.post("/", verifyTokenAndAuthorization, createDonor);
 
@@ -18,6 +25,6 @@ router.get("/find/:id", getOneDonor);
 router.delete("/:id", deleteDonor);
 
 //Stats
-router.get("/stats", getDonorStats);
+router.get("/stats", getDonorsStats);
 
 module.exports = router;

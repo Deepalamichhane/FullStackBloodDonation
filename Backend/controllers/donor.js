@@ -78,4 +78,11 @@ const getDonorsStats = async (req, res) => {
   }
 };
 
-module.exports = {deleteDonor, getAlldonors, getDonorsStats, getOneDonor, updateDonor, createDonor};
+module.exports = {
+  deleteDonor,
+  getAlldonors,
+  getDonorsStats,
+  getOneDonor,
+  updateDonor,
+  createDonor,
+};
